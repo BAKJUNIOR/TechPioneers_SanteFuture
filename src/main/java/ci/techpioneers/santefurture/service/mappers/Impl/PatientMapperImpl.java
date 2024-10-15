@@ -1,7 +1,6 @@
 package ci.techpioneers.santefurture.service.mappers.Impl;
 
 import ci.techpioneers.santefurture.models.Patient;
-
 import ci.techpioneers.santefurture.service.dto.PatientDTO;
 import ci.techpioneers.santefurture.service.mappers.PatientMapper;
 import lombok.RequiredArgsConstructor;

@@ -9,10 +9,9 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "medecins")
-public class Medecin extends Person {
+public class Medecin extends Person  {
     private String specialite;
-    private int experience;
-    private double consultationFee;
+    private String experience;
 
     @Enumerated(EnumType.STRING)
     private StatutMedecin statut;

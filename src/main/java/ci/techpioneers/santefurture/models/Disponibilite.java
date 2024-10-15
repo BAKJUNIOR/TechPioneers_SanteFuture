@@ -5,6 +5,7 @@ import ci.techpioneers.santefurture.models.enums.StatutDisponibilite;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -12,7 +13,7 @@ import java.time.LocalTime;
 @Data
 @Entity
 @Table(name = "disponibilites")
-public class Disponibilite {
+public class Disponibilite implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
