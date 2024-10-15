@@ -18,9 +18,9 @@ public class Service implements Serializable {
     private String nom;
     private double prixUnitaire;
 
-
-    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Medecin> medecins;
+
 
     @ManyToOne
     @JoinColumn(name = "ticket_id")

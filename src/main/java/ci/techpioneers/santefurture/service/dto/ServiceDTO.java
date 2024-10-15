@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -13,5 +14,5 @@ public class ServiceDTO {
     private Long id;
     private String nom;
     private double prixUnitaire;
-    private List<MedecinDTO> medecins;
+    private Set<MedecinDTO> medecins;
 }
