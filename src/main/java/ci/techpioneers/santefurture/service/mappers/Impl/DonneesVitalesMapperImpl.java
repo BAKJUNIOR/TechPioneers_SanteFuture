@@ -1,7 +1,6 @@
 package ci.techpioneers.santefurture.service.mappers.Impl;
 
 import ci.techpioneers.santefurture.models.DonneesVitales;
-
 import ci.techpioneers.santefurture.service.dto.DonneesVitalesDTO;
 import ci.techpioneers.santefurture.service.mappers.DonneesVitalesMapper;
 import lombok.RequiredArgsConstructor;

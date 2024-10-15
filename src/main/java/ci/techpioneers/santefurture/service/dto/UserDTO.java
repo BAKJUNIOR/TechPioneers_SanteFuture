@@ -1,8 +1,12 @@
 package ci.techpioneers.santefurture.service.dto;
 
+import ci.techpioneers.santefurture.models.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.Instant;
 import java.util.Set;
@@ -30,4 +34,6 @@ public class UserDTO {
     private boolean isActive = false;
 
     private Set<RoleDTO> roles;
+
+
 }

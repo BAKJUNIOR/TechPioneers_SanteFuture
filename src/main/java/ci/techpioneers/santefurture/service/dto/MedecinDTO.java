@@ -8,10 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MedecinDTO extends UserDTO {
+public class MedecinDTO extends PersonDTO {
     private String specialite;
-    private int experience;
-    private double consultationFee;
+    private String experience;
     private StatutMedecin statut;
     private Long serviceId;
 }

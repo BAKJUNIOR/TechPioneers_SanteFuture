@@ -1,7 +1,6 @@
 package ci.techpioneers.santefurture.service.mappers.Impl;
 
 import ci.techpioneers.santefurture.models.Consultation;
-
 import ci.techpioneers.santefurture.service.dto.ConsultationDTO;
 import ci.techpioneers.santefurture.service.mappers.ConsultationMapper;
 import lombok.RequiredArgsConstructor;

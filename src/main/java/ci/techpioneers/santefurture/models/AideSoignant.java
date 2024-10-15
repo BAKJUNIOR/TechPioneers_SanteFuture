@@ -14,7 +14,6 @@ import java.util.Set;
 public class AideSoignant extends Person {
     private String specialite;
     private int experience;
-    private boolean disponibilite;
 
     @OneToMany(mappedBy = "aideSoignant")
     private Set<DonneesVitales> donneesVitales;

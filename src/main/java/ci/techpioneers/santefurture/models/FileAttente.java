@@ -4,12 +4,13 @@ import ci.techpioneers.santefurture.models.enums.StatutAffectation;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
 @Table(name = "files_attente")
-public class FileAttente {
+public class FileAttente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
