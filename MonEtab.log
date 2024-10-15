@@ -3381,3 +3381,116 @@ Caused by: java.lang.IllegalStateException: Can't configure mvcMatchers after an
 2024-10-15T11:35:05.801Z  INFO 18284 --- [SanteFurture] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-15T11:35:06.110Z  INFO 18284 --- [SanteFurture] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-10-15T11:35:06.143Z  INFO 18284 --- [SanteFurture] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-15T12:48:36.397Z  INFO 8780 --- [SanteFurture] [restartedMain] c.t.s.SanteFurtureApplication            : Starting SanteFurtureApplication using Java 17.0.7 with PID 8780 (C:\ATOS Digital Academy\Java\ProjetAtos_Academy\Projet_final\SanteFurture\target\classes started by BAKAYOKO JUNIOR in C:\ATOS Digital Academy\Java\ProjetAtos_Academy\Projet_final\SanteFurture)
+2024-10-15T12:48:36.401Z  INFO 8780 --- [SanteFurture] [restartedMain] c.t.s.SanteFurtureApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T12:48:36.472Z  INFO 8780 --- [SanteFurture] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-15T12:48:36.472Z  INFO 8780 --- [SanteFurture] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-15T12:48:37.721Z  INFO 8780 --- [SanteFurture] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-15T12:48:37.854Z  INFO 8780 --- [SanteFurture] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 15 JPA repository interfaces.
+2024-10-15T12:48:38.592Z  INFO 8780 --- [SanteFurture] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-10-15T12:48:38.606Z  INFO 8780 --- [SanteFurture] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T12:48:38.606Z  INFO 8780 --- [SanteFurture] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T12:48:38.666Z  INFO 8780 --- [SanteFurture] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T12:48:38.666Z  INFO 8780 --- [SanteFurture] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2193 ms
+2024-10-15T12:48:38.850Z  INFO 8780 --- [SanteFurture] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-15T12:48:38.932Z  INFO 8780 --- [SanteFurture] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-15T12:48:38.975Z  INFO 8780 --- [SanteFurture] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-15T12:48:39.372Z  INFO 8780 --- [SanteFurture] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-15T12:48:39.407Z  INFO 8780 --- [SanteFurture] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-15T12:48:39.605Z  INFO 8780 --- [SanteFurture] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4112686f
+2024-10-15T12:48:39.607Z  INFO 8780 --- [SanteFurture] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-15T12:48:39.673Z  WARN 8780 --- [SanteFurture] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-15T12:48:41.205Z  INFO 8780 --- [SanteFurture] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-15T12:48:41.234Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.235Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « affectations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.236Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.236Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « affectations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.237Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.237Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « aide_soignant » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.238Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.238Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « consultations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.239Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.239Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « consultations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.240Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.240Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « consultations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.241Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.242Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « disponibilites » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.242Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.242Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « donnees_vitales » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.243Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.243Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « donnees_vitales » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.244Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.244Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « donnees_vitales » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.244Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.244Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « dossier_medical » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.245Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.245Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « files_attente » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.246Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.246Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « files_attente » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.247Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.247Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « medecins » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.247Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.248Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « medecins » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.248Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.249Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « notifications » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.249Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.249Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « patients » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.251Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.251Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « services » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.251Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.252Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « tickets » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.252Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.253Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « user_roles » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.253Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.253Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « user_roles » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.254Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.254Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « validation » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.256Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.256Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « affectations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.257Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.257Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « aide_soignant » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.258Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.258Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « consultations » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.259Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.259Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « disponibilites » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.260Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.260Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « donnees_vitales » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.260Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.260Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « dossier_medical » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.261Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.261Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « files_attente » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.262Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.262Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « medecins » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.263Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.263Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « notifications » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.263Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.263Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « patients » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.264Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.264Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « roles » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « services » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « tickets » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.265Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « user_roles » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.267Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.267Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « users » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.268Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.268Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « validation » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.269Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.269Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « aide_soignant_seq » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.270Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.270Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « medecins_seq » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.271Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-10-15T12:48:41.271Z  WARN 8780 --- [SanteFurture] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « patients_seq » n'existe pas, poursuite du traitement
+2024-10-15T12:48:41.678Z  INFO 8780 --- [SanteFurture] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T12:48:42.695Z  WARN 8780 --- [SanteFurture] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-15T12:48:42.717Z  INFO 8780 --- [SanteFurture] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name domainUserService
+2024-10-15T12:48:46.429Z  INFO 8780 --- [SanteFurture] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-15T12:48:46.495Z  INFO 8780 --- [SanteFurture] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-10-15T12:48:46.508Z  INFO 8780 --- [SanteFurture] [restartedMain] c.t.s.SanteFurtureApplication            : Started SanteFurtureApplication in 10.678 seconds (process running for 11.725)
+2024-10-15T12:50:03.605Z  INFO 8780 --- [SanteFurture] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-15T12:50:03.627Z  INFO 8780 --- [SanteFurture] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-15T12:50:03.846Z  INFO 8780 --- [SanteFurture] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 217 ms
+2024-10-15T13:28:26.345Z  WARN 8780 --- [SanteFurture] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m16s62ms311µs200ns).
+2024-10-15T13:53:48.347Z  WARN 8780 --- [SanteFurture] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m20s906ms949µs300ns).
