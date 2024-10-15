@@ -16,12 +16,15 @@ public class Medecin extends Person  {
     @Enumerated(EnumType.STRING)
     private StatutMedecin statut;
 
+
     @ManyToOne
     @JoinColumn(name = "service_id")
     private Service service;
 
     @OneToMany(mappedBy = "medecin", cascade = CascadeType.ALL)
     private Set<Consultation> consultations;
+
+
 
 
 

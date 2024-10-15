@@ -1,11 +1,13 @@
 package ci.techpioneers.santefurture.service.Impl;
 
 import ci.techpioneers.santefurture.models.Medecin;
+import ci.techpioneers.santefurture.models.Service;
 import ci.techpioneers.santefurture.models.Role;
 import ci.techpioneers.santefurture.models.User;
 import ci.techpioneers.santefurture.models.enums.StatutMedecin;
 import ci.techpioneers.santefurture.repositories.MedecinRepository;
 import ci.techpioneers.santefurture.repositories.RoleRepository;
+import ci.techpioneers.santefurture.repositories.ServiceRepository;
 import ci.techpioneers.santefurture.repositories.UserRepository;
 import ci.techpioneers.santefurture.service.MedecinService;
 import ci.techpioneers.santefurture.service.dto.MedecinDTO;
@@ -16,7 +18,7 @@ import ci.techpioneers.santefurture.utils.SlugifyUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
+
 
 import java.time.Instant;
 import java.util.List;
@@ -24,11 +26,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Service
+@org.springframework.stereotype.Service
 @RequiredArgsConstructor
 @Slf4j
 public class MedecinServiceImpl implements MedecinService {
     private final MedecinRepository medecinRepository;
+    private final ServiceRepository serviceRepository;
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final MedecinMapper medecinMapper;
@@ -77,6 +80,14 @@ public class MedecinServiceImpl implements MedecinService {
     public MedecinDTO registerMedecin(MedecinDTO medecinDTO) {
         log.debug("Request to register new Medecin: {}", medecinDTO);
 
+        if (medecinDTO.getServiceId() == null) {
+            throw new RuntimeException("Le service doit être spécifié.");
+        }
+
+
+        Service service = serviceRepository.findById(medecinDTO.getServiceId())
+                .orElseThrow(() -> new RuntimeException("Service non trouvé avec ID: " + medecinDTO.getServiceId()));
+
         Set<RoleDTO> rolesDTO = medecinDTO.getUser().getRoles();
         Set<Role> roles = rolesDTO.stream()
                 .map(roleDTO -> {
@@ -109,6 +120,9 @@ public class MedecinServiceImpl implements MedecinService {
         medecin.setUser(savedUser);
         medecin.setSlug(SlugifyUtils.generate(medecinDTO.getFirstName()));
         medecin.setStatut(StatutMedecin.ACTIF);
+        medecin.setService(service);
+
+
 
         Medecin savedMedecin = medecinRepository.save(medecin);
         log.debug("Medecin registered successfully: {}", savedMedecin);
