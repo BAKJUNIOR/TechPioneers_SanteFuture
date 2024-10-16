@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base href="https://medical.example.com/consultation/">
+    <title>Medical Consultation Ticket Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .ticket {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .info {
+            text-align: right;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="ticket">
+    <div class="header">
+        <div class="logo">
+            <img src="cid:logoImage" style="width: 40px; height: auto;" alt="Logo" />
+        </div>
+        <div class="info">
+            <p> <strong>Tel: 00225-27 22 40 22 43</strong> </p>
+            <p>Code Facture: <span th:text="${ticket.codeFacture}"></span></p>
+           <strong><p  th:text=" 'Date d\'émission: ' + ${#temporals.format(ticket.dateEmission, 'dd/MM/yyyy HH:mm:ss')}"></p></strong>
+           <strong><p th:text="'Valide jusqu\'au: ' + ${#temporals.format(ticket.dateValidite, 'dd/MM/yyyy HH:mm:ss')}"></p></strong>
+        </div>
+    </div>
+
+    <h1>Ticket de Consultation</h1>
+
+    <p><strong>Nom et prénom:</strong> <span th:text="${ticket.nomComplet}"></span></p>
+    <p><strong>Date de naissance:</strong> <span th:text="${#temporals.format(ticket.dateNaissance, 'dd/MM/yyyy')}"></span></p>
+    <p><strong>Age:</strong> <span th:text="${ticket.age}"></span></p>
+
+    <h2>Services:</h2>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Service</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Prix total</th>
+        </tr>
+        <tr th:each="service : ${ticket.services}">
+            <td th:text="${service.code}"></td>
+            <td th:text="${service.nom}"></td>
+            <td th:text="${#numbers.formatDecimal(service.prixUnitaire, 1, 2, 'COMMA')}"></td>
+            <td th:text="${ticket.quantity}"></td>
+            <td th:text="${#numbers.formatDecimal(service.prixUnitaire * ticket.quantity, 1, 2, 'COMMA')}"></td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p><strong>Total Général:</strong> <span th:text="${#numbers.formatDecimal(ticket.prixTotal, 1, 2, 'COMMA')} + ' FCFA'"></span></p>
+        <p><strong>Agent:</strong> <span th:text="${ticket.patientId}"></span></p>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    document.addEventListener('DOMContentLoaded', function() {
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }).replace(',', '');
+        document.querySelector('.info p:nth-child(3)').textContent = 'Date d\'émission: ' + formattedDate;
+
+        const validUntil = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);
+        const formattedValidUntil = validUntil.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }).replace(',', '');
+        document.querySelector('.info p:nth-child(4)').textContent = 'Valide jusqu\'au: ' + formattedValidUntil;
+    });
+    /*]]>*/
+</script>
+</body>
+</html>

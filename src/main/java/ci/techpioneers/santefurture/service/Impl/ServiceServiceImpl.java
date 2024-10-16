@@ -1,7 +1,7 @@
 package ci.techpioneers.santefurture.service.Impl;
 
 import ci.techpioneers.santefurture.repositories.ServiceRepository;
-import ci.techpioneers.santefurture.service.SrviceService;
+import ci.techpioneers.santefurture.service.ServiceService;
 import ci.techpioneers.santefurture.service.dto.ServiceDTO;
 import ci.techpioneers.santefurture.service.dto.MedecinDTO;
 import ci.techpioneers.santefurture.models.Service;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @org.springframework.stereotype.Service
 @RequiredArgsConstructor
-public class ServiceServiceImpl implements SrviceService {
+public class ServiceServiceImpl implements ServiceService {
 
     private final ServiceRepository serviceRepository;
     private final ServiceMapper serviceMapper;
