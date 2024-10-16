@@ -1,6 +1,6 @@
 package ci.techpioneers.santefurture.web.controller;
 
-import ci.techpioneers.santefurture.service.SrviceService;
+import ci.techpioneers.santefurture.service.ServiceService;
 import ci.techpioneers.santefurture.service.dto.ServiceDTO;
 import ci.techpioneers.santefurture.service.dto.MedecinDTO;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class ServiceController {
 
-    private final SrviceService serviceService;
+    private final ServiceService serviceService;
 
     @PostMapping
     public ResponseEntity<ServiceDTO> createService(@RequestBody ServiceDTO serviceDTO) {

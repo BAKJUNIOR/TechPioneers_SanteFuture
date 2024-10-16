@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public interface SrviceService {
+public interface ServiceService {
     ServiceDTO addService(ServiceDTO serviceDTO);
     ServiceDTO updateService(Long id, ServiceDTO serviceDTO);
     void deleteService(Long id);

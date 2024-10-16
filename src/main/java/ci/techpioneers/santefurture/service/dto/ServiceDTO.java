@@ -13,6 +13,8 @@ import java.util.Set;
 public class ServiceDTO {
     private Long id;
     private String nom;
+    private String description;
+    private String code;
     private double prixUnitaire;
     private Set<MedecinDTO> medecins;
 }

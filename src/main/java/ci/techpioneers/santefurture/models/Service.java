@@ -16,15 +16,18 @@ public class Service implements Serializable {
     private Long id;
 
     private String nom;
+    private String code;
     private double prixUnitaire;
+    private String description;
+
 
     @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Medecin> medecins;
 
 
-    @ManyToOne
-    @JoinColumn(name = "ticket_id")
-    private Ticket ticket;
+//    @ManyToOne
+//    @JoinColumn(name = "ticket_id")
+//    private Ticket ticket;
 
 
 

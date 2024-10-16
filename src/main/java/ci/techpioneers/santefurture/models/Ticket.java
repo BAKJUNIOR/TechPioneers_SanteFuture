@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
@@ -16,19 +17,20 @@ public class Ticket implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String code;
-
+    private String codeFacture;
     @Column(name = "date_creation")
     private Instant dateCreation;
+    private int Quantity;
+    private double prixTotal;
+    private LocalDateTime dateEmission;
+    private LocalDateTime dateValidite;
 
-    private String statut;
-    private double total;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
-    @OneToMany(mappedBy = "ticket", cascade = CascadeType.ALL)
+    @OneToMany( cascade = CascadeType.ALL)
     private Set<Service> services;
 
 

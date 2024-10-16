@@ -29,6 +29,7 @@ public class SecurityConfig {
                                 authorize -> authorize
                                         .requestMatchers("/api/admin/**").permitAll()
                                         .requestMatchers("/api/medecins/**").permitAll()
+                                        .requestMatchers("/api/tickets/**").permitAll()
                                         .requestMatchers("/api/services/**").permitAll()
                                         .requestMatchers("/api/auth/authenticate").permitAll()
 

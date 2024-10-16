@@ -12,6 +12,7 @@ import ci.techpioneers.santefurture.repositories.UserRepository;
 import ci.techpioneers.santefurture.service.MedecinService;
 import ci.techpioneers.santefurture.service.dto.MedecinDTO;
 import ci.techpioneers.santefurture.service.dto.RoleDTO;
+import ci.techpioneers.santefurture.service.dto.UserDTO;
 import ci.techpioneers.santefurture.service.mappers.MedecinMapper;
 import ci.techpioneers.santefurture.service.mappers.UserMapper;
 import ci.techpioneers.santefurture.utils.SlugifyUtils;
